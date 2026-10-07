@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Downloaded data and the built index (recreate with download_datasets.py and `python main.py ingest`)
+rag_datasets/
+vector_store/
+
+# Logs
+logs/*.log
+
+# Per-question evaluation output (the *_summary.json files are small and worth keeping)
+evaluation_results/**/generation_results.jsonl
+evaluation_results/**/generation_errors.jsonl
+evaluation_results/**/retrieval_details.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

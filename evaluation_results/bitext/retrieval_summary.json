@@ -1,0 +1,104 @@
+{
+  "settings": {
+    "dataset": "bitext",
+    "questions": 270,
+    "chunking": {
+      "chunk_size": 900,
+      "chunk_overlap": 150
+    },
+    "embeddings": {
+      "model": "text-embedding-3-large",
+      "dimensions": null,
+      "batch_size": 128
+    },
+    "retrieval": {
+      "top_k": 5,
+      "fetch_k": 30,
+      "sources": null,
+      "rerank": {
+        "enabled": false,
+        "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "num_threads": 4
+      }
+    },
+    "llm": {
+      "model": "gpt-6.1-sol",
+      "max_output_tokens": 16000,
+      "effort": "medium"
+    }
+  },
+  "questions": 270,
+  "metrics": {
+    "mrr": {
+      "mean": 0.9778,
+      "ci95": 0.0133,
+      "n": 270
+    },
+    "hit@1": {
+      "mean": 0.9593,
+      "ci95": 0.0236,
+      "n": 270
+    },
+    "recall@1": {
+      "mean": 0.9593,
+      "ci95": 0.0236,
+      "n": 270
+    },
+    "ndcg@1": {
+      "mean": 0.9593,
+      "ci95": 0.0236,
+      "n": 270
+    },
+    "hit@3": {
+      "mean": 0.9963,
+      "ci95": 0.0073,
+      "n": 270
+    },
+    "recall@3": {
+      "mean": 0.9963,
+      "ci95": 0.0073,
+      "n": 270
+    },
+    "ndcg@3": {
+      "mean": 0.9826,
+      "ci95": 0.011,
+      "n": 270
+    },
+    "hit@5": {
+      "mean": 0.9963,
+      "ci95": 0.0073,
+      "n": 270
+    },
+    "recall@5": {
+      "mean": 0.9963,
+      "ci95": 0.0073,
+      "n": 270
+    },
+    "ndcg@5": {
+      "mean": 0.9826,
+      "ci95": 0.011,
+      "n": 270
+    },
+    "hit@10": {
+      "mean": 0.9963,
+      "ci95": 0.0073,
+      "n": 270
+    },
+    "recall@10": {
+      "mean": 0.9963,
+      "ci95": 0.0073,
+      "n": 270
+    },
+    "ndcg@10": {
+      "mean": 0.9826,
+      "ci95": 0.011,
+      "n": 270
+    },
+    "context_recall": {
+      "mean": 0.9926,
+      "ci95": 0.0102,
+      "n": 270
+    }
+  },
+  "mean_latency_s": 2.833
+}

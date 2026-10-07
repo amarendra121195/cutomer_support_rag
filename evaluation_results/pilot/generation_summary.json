@@ -1,0 +1,95 @@
+{
+  "settings": {
+    "dataset": "expertwritten",
+    "questions": 5,
+    "chunking": {
+      "chunk_size": 900,
+      "chunk_overlap": 150
+    },
+    "embeddings": {
+      "model": "text-embedding-3-large",
+      "dimensions": null,
+      "batch_size": 128
+    },
+    "retrieval": {
+      "top_k": 5,
+      "fetch_k": 30,
+      "sources": null,
+      "rerank": {
+        "enabled": false,
+        "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "num_threads": 4
+      }
+    },
+    "llm": {
+      "model": "gpt-6.1-sol",
+      "max_output_tokens": 16000,
+      "effort": "medium"
+    }
+  },
+  "cases": {
+    "scored": 5,
+    "truncated": 0,
+    "refused": 0,
+    "errors": 0
+  },
+  "metrics": {
+    "context_recall": {
+      "mean": 0.9,
+      "ci95": 0.196,
+      "n": 5
+    },
+    "token_f1": {
+      "mean": 0.3603,
+      "ci95": 0.1044,
+      "n": 5
+    },
+    "rouge_l": {
+      "mean": 0.2315,
+      "ci95": 0.0777,
+      "n": 5
+    },
+    "semantic_similarity": {
+      "mean": 0.7897,
+      "ci95": 0.0854,
+      "n": 5
+    },
+    "correctness": {
+      "mean": 0.8,
+      "ci95": 0.24,
+      "n": 5
+    },
+    "faithfulness": {
+      "mean": 1.0,
+      "ci95": 0.0,
+      "n": 5
+    },
+    "relevance": {
+      "mean": 1.0,
+      "ci95": 0.0,
+      "n": 5
+    },
+    "abstained": {
+      "mean": 0.0,
+      "ci95": 0.0,
+      "n": 5
+    }
+  },
+  "mean_latency_s": 10.72,
+  "generator": {
+    "models": [
+      "gpt-6.1-sol"
+    ],
+    "input_tokens": 5594,
+    "output_tokens": 1015,
+    "cost_usd": 0.0213
+  },
+  "judge": {
+    "models": [
+      "gpt-6-luna"
+    ],
+    "input_tokens": 8717,
+    "output_tokens": 1928,
+    "cost_usd": 0.0018
+  }
+}

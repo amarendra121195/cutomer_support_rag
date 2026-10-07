@@ -1,0 +1,104 @@
+{
+  "settings": {
+    "dataset": "expertwritten",
+    "questions": 5,
+    "chunking": {
+      "chunk_size": 900,
+      "chunk_overlap": 150
+    },
+    "embeddings": {
+      "model": "text-embedding-3-large",
+      "dimensions": null,
+      "batch_size": 128
+    },
+    "retrieval": {
+      "top_k": 5,
+      "fetch_k": 30,
+      "sources": null,
+      "rerank": {
+        "enabled": false,
+        "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "num_threads": 4
+      }
+    },
+    "llm": {
+      "model": "gpt-6.1-sol",
+      "max_output_tokens": 16000,
+      "effort": "medium"
+    }
+  },
+  "questions": 5,
+  "metrics": {
+    "mrr": {
+      "mean": 0.65,
+      "ci95": 0.294,
+      "n": 5
+    },
+    "hit@1": {
+      "mean": 0.4,
+      "ci95": 0.4801,
+      "n": 5
+    },
+    "recall@1": {
+      "mean": 0.4,
+      "ci95": 0.4801,
+      "n": 5
+    },
+    "ndcg@1": {
+      "mean": 0.4,
+      "ci95": 0.4801,
+      "n": 5
+    },
+    "hit@3": {
+      "mean": 0.8,
+      "ci95": 0.392,
+      "n": 5
+    },
+    "recall@3": {
+      "mean": 0.8,
+      "ci95": 0.392,
+      "n": 5
+    },
+    "ndcg@3": {
+      "mean": 0.6524,
+      "ci95": 0.3583,
+      "n": 5
+    },
+    "hit@5": {
+      "mean": 1.0,
+      "ci95": 0.0,
+      "n": 5
+    },
+    "recall@5": {
+      "mean": 0.9,
+      "ci95": 0.196,
+      "n": 5
+    },
+    "ndcg@5": {
+      "mean": 0.7052,
+      "ci95": 0.27,
+      "n": 5
+    },
+    "hit@10": {
+      "mean": 1.0,
+      "ci95": 0.0,
+      "n": 5
+    },
+    "recall@10": {
+      "mean": 0.9,
+      "ci95": 0.196,
+      "n": 5
+    },
+    "ndcg@10": {
+      "mean": 0.7052,
+      "ci95": 0.27,
+      "n": 5
+    },
+    "context_recall": {
+      "mean": 0.9,
+      "ci95": 0.196,
+      "n": 5
+    }
+  },
+  "mean_latency_s": 2.249
+}
